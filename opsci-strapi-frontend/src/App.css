@@ -1,0 +1,148 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.event-container {
+  flex: 2;
+  display: flex;
+  height: 90vh;
+  align-items: start;
+  justify-content: left;
+  overflow-y: scroll;
+  flex-direction: column;
+  padding: 24px;
+  background: grey;
+  border-radius: 8px;
+  gap: 12px;
+  margin-top: 24px;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  width: 20rem;
+  margin-right: 24px;
+}
+
+.event-line {
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  overflow-x: clip;
+}
+
+.card-container {
+  flex: 9;
+  height: calc(99vh - 48px);
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  padding: 24px;
+}
+
+.product-card-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  align-items: center;
+}
+.product-card-name {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.product-card-desc {
+  display: none;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: grey;
+  border-radius: 8px;
+  padding: 42px;
+  max-height: 200px;
+  min-width: 200px;
+  flex: 1;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.load-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.5);
+  padding: 24px;
+  border-radius: 8px;
+}

@@ -1,0 +1,37 @@
+version: '3'
+services:
+
+  product-consumer:
+    build: 
+      context: ./product-consumer
+      dockerfile: Dockerfile
+    container_name: product-consumer
+    environment:
+      KAFKAJS_NO_PARTITIONER_WARNING: 1
+    networks:
+      - strapi-network
+
+  event-consumer:
+    build: 
+      context: ./event-consumer
+      dockerfile: Dockerfile
+    container_name: event-consumer
+    environment:
+      KAFKAJS_NO_PARTITIONER_WARNING: 1
+    networks:
+      - strapi-network
+
+  stock-consumer:
+    build: 
+      context: ./stock-consumer
+      dockerfile: Dockerfile
+    container_name: stock-consumer
+    environment:
+      KAFKAJS_NO_PARTITIONER_WARNING: 1
+    networks:
+      - strapi-network
+
+networks:
+  strapi-network:
+    external: true
+

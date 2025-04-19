@@ -1,0 +1,30 @@
+version: '3'
+services:
+
+  product-producer:
+    build: 
+      context: ./product-producer
+      dockerfile: Dockerfile
+    container_name: product-producer
+    networks:
+      - strapi-network
+      
+  event-producer:
+    build: 
+      context: ./event-producer
+      dockerfile: Dockerfile
+    container_name: event-producer
+    networks:
+      - strapi-network
+      
+  stock-producer:
+    build: 
+      context: ./stock-producer
+      dockerfile: Dockerfile
+    container_name: stock-producer
+    networks:
+      - strapi-network
+      
+networks:
+  strapi-network:
+    external: true
