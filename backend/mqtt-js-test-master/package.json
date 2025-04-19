@@ -1,0 +1,11 @@
+{
+  "name": "mqtt-client",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "author": "arthur.escriou <arthur.escriou@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^5.5.3"
+  }
+}

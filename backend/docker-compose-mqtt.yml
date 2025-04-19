@@ -1,0 +1,28 @@
+version: '3'
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    networks:
+      - strapi-network
+ 
+  mqtt-kafka-connector:
+    build: 
+      context: ./mqtt-kafka-connector-master
+      dockerfile: Dockerfile
+    container_name: mqtt-kafka-connector
+    environment:
+      KAFKAJS_NO_PARTITIONER_WARNING: 1
+    networks:
+      - strapi-network
+    
+networks:
+  strapi-network:
+    external: true
+    

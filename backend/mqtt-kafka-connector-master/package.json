@@ -1,0 +1,12 @@
+{
+  "name": "mqtt-kafka-connector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "arthur.escriou <arthur.escriou@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "mqtt": "^5.5.3"
+  }
+}
