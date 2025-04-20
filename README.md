@@ -91,6 +91,7 @@ Ainsi, chaque message produit est traité par un consumer qui déclenche une req
 ## Partie 3 : TME 10-11 : Ajout à notre architecture des objets connectés
 
 Afin d’indiquer les modifications apportées au projet pour le TME, nous avons créé une branche tme10-11 dans notre dépôt GitHub.
+Nous avons décidé de faire une seule vidéo qui parcourt le projet au complet, de l'ajout d'un produit à sa mise à jour via Kafka et montrant la chaine de modification de stock: front -> MQTT -> kafka -> strapi.
 
 Nous y avons ajouté un fichier docker-compose-mqtt.yml contenant la configuration des conteneurs Mosquitto (MQTT) et MQTT-Kafka connector, ainsi que le dossier fourni permettant de tester le fonctionnement de Mosquitto.
 
