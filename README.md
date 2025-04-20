@@ -23,13 +23,13 @@ WORKDIR /srv/app
 
 COPY ./package.json ./yarn.lock ./
 
-RUN node \-v 
+RUN node -v 
 
 RUN yarn install 
 
 COPY . . 
 
-CMD \["yarn", "develop"\]
+CMD ["yarn", "develop"]
    ```
 
 Nous avons mis en place un fichier docker-compose.yml pour orchestrer les conteneurs suivants : strapi, strapi\_pg (base de données PostgreSQL), zookeeper et kafka. Ce fichier décrit les quatre services cités, définit les connexions entre ces services et  mappe les ports locaux.
@@ -37,7 +37,7 @@ Nous avons mis en place un fichier docker-compose.yml pour orchestrer les conten
 Par ailleurs, la variable d’environnement suivante, définie dans le fichier docker-compose.yml : 
 
 ```env
-DATABASE\_HOST=strapi-pg 
+DATABASE_HOST=strapi-pg 
 ```
 
 indique que la base de données PostgreSQL utilisée est hébergée dans le conteneur strapi-pg, présent dans le même réseau Docker strapi-network, que nous avons préalablement créé manuellement.
